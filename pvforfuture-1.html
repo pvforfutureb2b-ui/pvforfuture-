@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PV for Future – Photovoltaik Großanlagen & Materialbeschaffung</title>
+  <meta name="description" content="PV for Future – Ihr Partner für Photovoltaik-Großanlagen & Materialbeschaffung. Module, Wechselrichter, Montagesysteme, Kabel. EU-Lager, schnelle Lieferung, persönliche Beratung.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0f16;
+      --card:#101726;
+      --text:#e8edf6;
+      --muted:#aab6cc;
+      --brand:#00aefe;      /* Tech-Blau */
+      --brand-2:#ffd60a;    /* Solar-Gelb */
+      --accent: #1b2538;
+      --shadow: 0 20px 50px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.55}
+    a{color:var(--brand);text-decoration:none}
+    header.nav{
+      position:sticky;top:0;z-index:50;background:rgba(11,15,22,.75);
+      backdrop-filter: blur(10px); border-bottom:1px solid rgba(255,255,255,.06)
+    }
+    .nav-inner{max-width:var(--max);margin:auto;display:flex;gap:18px;align-items:center;padding:12px 18px}
+    .logo{font-family:Poppins,Inter,Arial,sans-serif;font-weight:800;letter-spacing:.3px}
+    .logo b{color:var(--brand)}
+    .nav-links{margin-left:auto;display:flex;gap:18px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg,#0f1624,#0b0f16);color:var(--text);box-shadow:var(--shadow);transition:.2s}
+    .btn:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.25)}
+    .btn-primary{background:linear-gradient(180deg,#00b8ff,#0086c7);border:none;color:#00131c}
+    .btn-primary:hover{filter:brightness(1.05)}
+    .wrap{max-width:var(--max);margin:auto;padding:28px 18px}
+    .hero{
+      padding:64px 18px 84px;
+      background:
+        linear-gradient(180deg,rgba(11,15,22,.2),rgba(11,15,22,.8)),
+        url('https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+      border-bottom:1px solid rgba(255,255,255,.06)
+    }
+    .hero-inner{max-width:var(--max);margin:auto;display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}
+    @media(max-width:900px){.hero-inner{grid-template-columns:1fr}}
+    h1{font-family:Poppins,Inter,sans-serif;font-size: clamp(30px,5vw,52px);line-height:1.1;margin:0 0 14px}
+    .sub{color:var(--muted);font-size:clamp(15px,2.2vw,18px);margin-bottom:22px}
+    .card{background:linear-gradient(180deg,#0f1624,#0b0f16);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .grid{display:grid;gap:18px}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    @media(max-width:900px){.grid-3,.grid-2{grid-template-columns:1fr}}
+    section{padding:64px 0;border-top:1px solid rgba(255,255,255,.06)}
+    h2{font-family:Poppins,Inter,sans-serif;font-size:clamp(22px,3.5vw,32px);margin:0 0 12px}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .feature{padding:18px;border-radius:14px;background:var(--accent);border:1px solid rgba(255,255,255,.06)}
+    .feature h3{margin:6px 0 8px;font-size:18px}
+    .feature p{color:var(--muted);margin:0}
+    .badge{display:inline-block;background:rgba(0,174,254,.12);color:var(--brand);padding:6px 10px;border-radius:999px;font-size:12px;font-weight:600;border:1px solid rgba(0,174,254,.25)}
+    .projects img{width:100%;height:220px;object-fit:cover;border-radius:14px;border:1px solid rgba(255,255,255,.08)}
+    .highlight{display:flex;gap:14px;align-items:center;color:#00131c;background:linear-gradient(90deg,#ffd60a,#fff0a3);padding:12px 14px;border-radius:12px;font-weight:700}
+    .contact{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+    @media(max-width:900px){.contact{grid-template-columns:1fr}}
+    .form label{display:block;margin:0 0 6px}
+    .form input,.form textarea{
+      width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.1);
+      background:#0e1421;color:var(--text);outline:none
+    }
+    .form textarea{min-height:130px;resize:vertical}
+    footer{padding:28px 18px;color:var(--muted);text-align:center;border-top:1px solid rgba(255,255,255,.06)}
+    .small{font-size:12px;color:var(--muted)}
+    .kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:12px}
+    @media(max-width:900px){.kpi{grid-template-columns:repeat(2,1fr)}}
+    .kpi .tile{padding:16px;border-radius:14px;background:var(--accent);border:1px solid rgba(255,255,255,.06);text-align:center}
+    .kpi .num{font-size:28px;font-weight:800;font-family:Poppins}
+    .kpi .lab{color:var(--muted);font-size:12px;margin-top:4px}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="logo">PV <b>for Future</b></div>
+      <nav class="nav-links">
+        <a href="#leistungen">Leistungen</a>
+        <a href="#projekte">Projekte</a>
+        <a href="#warum">Warum wir</a>
+        <a href="#kontakt">Kontakt</a>
+        <a class="btn btn-primary" href="mailto:pvforfutureb2b@gmail.com">Projektanfrage</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <span class="badge">Photovoltaik · B2B</span>
+        <h1>Ihr Partner für <span style="color:var(--brand)">Großanlagen</span> & Materialbeschaffung</h1>
+        <p class="sub">Module, Wechselrichter, Montagesysteme und Kabel – direkt aus EU‑Lägern. Persönliche Beratung, schnelle Logistik und transparente Konditionen.</p>
+        <div class="grid grid-2">
+          <a class="btn btn-primary" href="mailto:pvforfutureb2b@gmail.com?subject=Projektanfrage%20PV%20Großanlage">Projektanfrage senden</a>
+          <a class="btn" href="#leistungen">Mehr erfahren</a>
+        </div>
+        <div class="kpi">
+          <div class="tile"><div class="num">1+ MWp</div><div class="lab">installierte Leistung 2025</div></div>
+          <div class="tile"><div class="num">EU</div><div class="lab">Lager & Versand</div></div>
+          <div class="tile"><div class="num">24–72h</div><div class="lab">typ. Angebotszeit</div></div>
+          <div class="tile"><div class="num">B2B</div><div class="lab">direkte Konditionen</div></div>
+        </div>
+      </div>
+      <div class="card" style="padding:18px">
+        <div class="highlight">Kostenloses Erstgespräch – wir prüfen Machbarkeit & Preise für Ihr Projekt</div>
+        <ul style="margin:14px 0 0 18px;color:var(--muted)">
+          <li>Komponentenvergleich (Fronius, Growatt, Hoymiles, FoxESS u. a.)</li>
+          <li>Verlege- & String-Planung bis zum Wechselrichter</li>
+          <li>Lieferung direkt zur Baustelle</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="leistungen">
+    <div class="wrap">
+      <h2>Leistungen</h2>
+      <p class="lead">Alles aus einer Hand – für Freiflächen-, Dach- und Gewerbeprojekte.</p>
+      <div class="grid grid-3">
+        <div class="feature">
+          <h3>Solarmodule & Wechselrichter</h3>
+          <p>N‑Type/Bifacial Module, String‑ & Hybrid‑WR bis MW‑Klasse. Auswahl passgenau zu Ertrag & Budget.</p>
+        </div>
+        <div class="feature">
+          <h3>Montage & Kabel</h3>
+          <p>Unterkonstruktionen für Freiland/Dach, DC‑/AC‑Kabel (6–16 mm²), Steckverbinder, Schutz & Zubehör.</p>
+        </div>
+        <div class="feature">
+          <h3>Planung & Support</h3>
+          <p>Verlegepläne, String‑Design, Ertragsabschätzung, Stücklisten, Logistik – bis zur Übergabe an den Netzanschluss.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projekte">
+    <div class="wrap">
+      <h2>Projekte</h2>
+      <p class="lead">Auszug aktueller Referenzen & Beispielprojekte.</p>
+      <div class="grid grid-3 projects">
+        <img alt="Solarpark" src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=1200&auto=format&fit=crop">
+        <img alt="Gewerbedach" src="https://images.unsplash.com/photo-1584270354949-c26b0d5b0f83?q=80&w=1200&auto=format&fit=crop">
+        <img alt="Technikraum" src="https://images.unsplash.com/photo-1581091014524-2eca8e4b8b9c?q=80&w=1200&auto=format&fit=crop">
+      </div>
+    </div>
+  </section>
+
+  <section id="warum">
+    <div class="wrap">
+      <h2>Warum PV for Future?</h2>
+      <div class="grid grid-3">
+        <div class="feature"><h3>Direktpreise</h3><p>Großhandels‑Konditionen durch Herstellerkontakte & EU‑Lager.</p></div>
+        <div class="feature"><h3>Schnelle Verfügbarkeit</h3><p>Kurze Wege, verlässliche Lieferzeiten – auf Wunsch direkt zur Baustelle.</p></div>
+        <div class="feature"><h3>Persönliche Betreuung</h3><p>Ein Ansprechpartner von der Planung bis zur Lieferung.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt">
+    <div class="wrap contact">
+      <div>
+        <h2>Kontakt & Anfrage</h2>
+        <p class="lead">Schildern Sie kurz Ihr Vorhaben – wir melden uns mit Termin & Konditionen.</p>
+        <div class="card" style="padding:18px">
+          <p style="margin:0 0 6px"><b>PV for Future – Christian Neuhold</b></p>
+          <p class="small" style="margin:0">Mettersdorf 167/1 · 8092 Mettersdorf · Österreich</p>
+          <p class="small" style="margin:8px 0 0">📞 <a href="tel:+436606561067">+43 660 6561067</a> &nbsp;·&nbsp; 📧 <a href="mailto:pvforfutureb2b@gmail.com">pvforfutureb2b@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="card" style="padding:18px">
+        <form class="form" action="mailto:pvforfutureb2b@gmail.com" method="post" enctype="text/plain">
+          <label for="name">Name</label>
+          <input id="name" name="Name" placeholder="Ihr Name">
+          <label for="mail">E‑Mail</label>
+          <input id="mail" name="E-Mail" type="email" placeholder="name@firma.com">
+          <label for="tel">Telefon</label>
+          <input id="tel" name="Telefon" placeholder="+43 …">
+          <label for="msg">Nachricht</label>
+          <textarea id="msg" name="Nachricht" placeholder="Projektgröße, Standort, gewünschte Komponenten …"></textarea>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+            <button class="btn btn-primary" type="submit">Anfrage senden</button>
+            <a class="btn" href="mailto:pvforfutureb2b@gmail.com?subject=Projektanfrage%20PV%20Gro%C3%9Fanlage">Oder per E‑Mail</a>
+          </div>
+          <p class="small" style="margin-top:10px">Mit Klick auf „Anfrage senden“ wird Ihr E‑Mail‑Programm geöffnet.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap" style="text-align:center">
+      <div class="small">© 2025 PV for Future – Christian Neuhold · Alle Rechte vorbehalten</div>
+      <div class="small">pvforfuture.com</div>
+    </div>
+  </footer>
+</body>
+</html>
